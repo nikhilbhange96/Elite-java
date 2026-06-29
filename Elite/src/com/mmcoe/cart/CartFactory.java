@@ -6,7 +6,7 @@ public class CartFactory {
 	}
 	
 	public static Shopping newCart() {
-		return new ShoppingCart();
+		return new Shopping();
 	}
 
 }
