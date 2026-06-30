@@ -1,0 +1,21 @@
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class SortedPerson {
+
+	public static void main(String[] args) {
+		
+		Comparator<Person> ageComp=(p1,p2)-> p1.getAge()-p2.getAge();
+		Comparator<Person> nameComp=(p1,p2)-> p2.getName().compareTo(p2.getName());
+		
+		TreeSet<Person>people=new TreeSet<Person>();
+		
+		people.add(new Person("polo",24));
+		people.add(new Person("Mona",31));
+		people.add(new Person("Jack",23));
+		
+		people.forEach(System.out::println);
+
+	}
+
+}
