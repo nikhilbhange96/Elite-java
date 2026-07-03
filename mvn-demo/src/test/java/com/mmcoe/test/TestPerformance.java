@@ -1,0 +1,23 @@
+package com.mmcoe.test;
+
+import static org.junit.jupiter.api.Assertions.assertTimeout;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+public class TestPerformance {
+	
+	@Test
+	@Timeout(unit=TimeUnit.MILLISECONDS,value=5)
+	public void testTimeout()throws InterruptedException{
+		Thread.sleep(1);
+	}
+	
+	public void testAsserTimeout() {
+		assertTimeout(Duration.ofMillis(100),() ->Thread.sleep(9));
+	}
+
+}
