@@ -26,7 +26,7 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
-	private void print() {
+	 void print() {
 		SecurityManager mgr=new SecurityManager();
 		mgr.checkPermission(new BasicPermission("Private Method") {
 		});
